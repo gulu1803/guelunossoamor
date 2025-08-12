@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NA | ❤️</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2a1b22">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js" defer></script>
+  <script type="module" src="js/auth/silent-supabase.js" defer></script>
+  <script type="module" src="js/sync/sync.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">Nosso amor | Gu & Lu ❤️</div>
+    <div class="header-right">
+      <div id="greeting">Olá, ...</div>
+      <div id="status-bar">
+        <span id="weather"></span>
+        <span id="clock"></span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar" id="navbar">
+    <a href="#/" class="nav-link">Início</a>
+    <a href="#/gallery" class="nav-link">Galeria</a>
+    <a href="#/letters" class="nav-link">Cartas</a>
+    <a href="#/timeline" class="nav-link">Linha do tempo</a>
+    <a href="#/achievements" class="nav-link">Conquistas</a>
+    <a href="#/map" class="nav-link">Mapa</a>
+    <button id="loginBtn" class="btn primary" style="display:none">Entrar</button>
+    <button id="logoutBtn" class="btn subtle">Sair</button>
+  </nav>
+
+  <main id="app"></main>
+
+  <dialog id="loginDialog" class="login-dialog modern">
+    <form id="loginForm" method="dialog">
+      <div class="login-hero">💘</div>
+      <h2>Entrar</h2>
+      <label class="label">Quem é você?
+        <select id="loginUser" class="input">
+          <option value="gustavo">Gustavo</option>
+          <option value="luiza">Luiza</option>
+        </select>
+      </label>
+      <label class="label">Senha
+        <input id="loginPass" class="input" type="password" inputmode="numeric" autocomplete="current-password" required>
+      </label>
+      <div class="row gap">
+        <button id="loginSubmit" class="btn primary" value="ok">Entrar</button>
+      </div>
+      <p id="loginError" class="error"></p>
+    </form>
+  </dialog>
+
+  <dialog id="modal" class="modal"></dialog>
+</body>
+</html>
